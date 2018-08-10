@@ -1,0 +1,421 @@
+.index-wrapper {
+    overflow: hidden;
+}
+
+.index-header {
+    height: 28px;
+
+    background-color: #545652;
+}
+
+.index-nav a>li {
+    font-size: 12px;
+    line-height: 28px;
+
+    width: 48px;
+
+    -webkit-transition: all .1s;
+    -o-transition: all .1s;
+    transition: all .1s;
+    text-align: center;
+
+    color: rgba(255, 255, 255, .8);
+}
+
+.index-nav li:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.index-left-nav {
+    float: left;
+
+    min-width: 980px;
+}
+
+.index-left-nav a>li {
+    float: left;
+}
+
+.index-right-nav {
+    float: right;
+
+    min-width: 100px;
+}
+
+.index-right-nav a>li {
+    float: right;
+}
+
+.index-search-banner {
+    border-bottom: 1px solid rgba(150, 150, 150, .1);
+    background-color: #f0f3f5;
+}
+
+.index-search-content {
+    overflow: hidden;
+
+    width: 1180px;
+    height: 75px;
+    margin: 0 auto;
+}
+
+.movie-logo {
+    float: left;
+
+    width: 145px;
+    height: 74px;
+    padding: 15px 0 10px 0;
+
+    text-align: center;
+}
+
+.movie-logo>a {
+    display: block;
+
+    width: 145px;
+    height: 30px;
+    padding-top: 10px;
+}
+
+.search-input-banner {
+    position: relative;
+
+    float: left;
+
+    height: 74px;
+    padding-top: 18px;
+    padding-left: 20px;
+}
+
+.search-input {
+    font-size: 12px;
+
+    width: 450px;
+    height: 36px;
+    padding: 0 15px;
+
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(230, 230, 230, 1);
+}
+
+.search-input-submit {
+    width: 60px;
+    height: 36px;
+
+    cursor: pointer;
+
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    background-color: #3fa156;
+}
+
+input.search-input-submit:hover {
+    border: 1px solid #6aad54;
+    background-color: #4fca6c;
+}
+
+input.search-input-submit:active {
+    background-color: #3fa156;
+}
+
+.index-menu-banner {
+    overflow: hidden;
+
+    height: 40px;
+
+    background-color: #f0f3f5;
+}
+
+.menu {
+    width: 1180px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.menu>li {
+    line-height: 40px;
+
+    float: left;
+
+    min-width: 40px;
+    height: 40px;
+    margin: 0 10px;
+
+    text-align: center;
+
+    color: #27a;
+}
+
+.index-content-wrapper {
+    overflow: hidden;
+
+    width: 1180px;
+    margin: 0 auto;
+    padding-top: 30px;
+
+    background-color: #fff;
+}
+
+.index-content {
+    float: left;
+    overflow: hidden;
+
+    width: 700px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.index-movies-tags {
+    line-height: 20px;
+
+    overflow: hidden;
+
+    width: inherit;
+    height: 32px;
+    margin-bottom: 10px;
+}
+
+.index-movies-tags>li {
+    line-height: 30px;
+
+    float: left;
+
+    min-width: 20px;
+    height: 30px;
+    margin: 0 5px;
+    padding: 0 5px;
+
+    vertical-align: bottom;
+}
+
+.index-movies-tags>li:nth-child(1) {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.index-movies-silders {
+    overflow: hidden;
+
+    min-width: 700px;
+    height: 270px;
+}
+
+.index-movies-silders>li {
+    float: left;
+
+    width: 115px;
+    height: 270px;
+    margin-right: 25px;
+}
+
+.index-movies-item {
+    width: 115px;
+    height: 270px;
+}
+
+.index-movies-item img {
+    width: 115px;
+    height: 160px;
+}
+
+.index-movies-item>li {
+    font-size: 12px;
+    line-height: 20px;
+
+    width: 115px;
+    height: 20px;
+    overflow: hidden;
+
+    text-align: center;
+    white-space: nowrap text-overflow: ellipsis;
+
+    color: rgba(0, 0, 0, .8);
+}
+
+.index-movies-item>li:nth-child(1) {
+    margin-bottom: 20px;
+}
+
+.index-movies-item>li:nth-child(4) {
+    height: 24px;
+    margin-top: 10px;
+}
+
+.index-movies-item>li.image {
+    width: 115px;
+    height: 160px;
+}
+
+.index-movies-item button.purchase {
+    font-size: 12px;
+
+    width: 90px;
+    height: 24px;
+
+    cursor: pointer;
+
+    color: #fff;
+    border-radius: 3px;
+    background-color: #268dcd;
+}
+
+.alert-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0);
+    z-index: -1;
+
+
+    -webkit-transition: all .1s;
+    -o-transition: all .1s;
+    transition: all .1s;
+}
+
+.alert-content-banner {
+    padding: 50px;
+    width: 800px;
+    height: 800px;
+
+    background-color: #fff;
+
+    position: fixed;
+    margin: auto;
+
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+
+
+    border-radius: 5px;
+
+    overflow-y: scroll;
+
+    -webkit-transition: all .1s;
+    -o-transition: all .1s;
+    transition: all .1s;
+}
+.alert-content-banner img
+{
+    width: 138px;
+    height: 192px;
+    float: left;
+}
+.alert-content-banner h1
+{
+    color: rgba(0,0,0,.6);
+    font-size: 24px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+.alert-content-banner p
+{
+    height: 18px;
+    float: left;
+
+    width: 50%;
+    line-height: 18px;
+
+    margin: 5px 0;
+    padding: 0 20px;
+}
+.alert-content-banner p.describe
+{
+    height: 180px;
+    overflow: hidden;
+    float: left;
+    width: 100%;
+
+    line-height: 24px;
+
+    margin: 30px 0;
+    padding: 0;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+    background-color: #268dcd;
+    color: #fff;
+
+    font-size: 30px;
+    font-weight: 100;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+
+.close-button:hover {
+    opacity: .9;
+}
+
+
+
+.common-adv
+{
+    width: 1180px;
+    float: left;
+    height: 120px;
+    overflow: hidden;
+}
+
+.index-aside
+{
+    float: right;
+    width: 400px;
+    min-height: 500px;
+    padding: 50px;
+}
+.index-aside-event
+{
+    width: 300px;
+    margin: 0 auto;
+    height: 230px;
+}
+.event-list
+{
+    width: inherit;
+    height: inherit;
+
+    padding-bottom: 50px;
+}
+.event-list > li
+{
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+
+    background-color: #f2f7f6;
+    border-radius: 3px;
+}
+.event-list > li:nth-child(1)
+{
+    height: 50px;
+}
+.event-list > li p.event-title
+{
+    padding: 5px 0;
+    color: #007722;
+    font-size: 22px;
+}

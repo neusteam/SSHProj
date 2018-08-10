@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录豆瓣</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/sign_in_up.css">
+    <script src="./js/util.js"></script>
+</head>
+
+<body>
+    <div class="sign-in-up-wrapper">
+        <div class="sign-in-up-header">
+            <a href="" class="logo">豆瓣登录</a>
+        </div>
+        <div class="sign-in-up-content">
+            <h1>登录豆瓣</h1>
+            <form action="login" method="post" class="sign-in-up-form">
+                <div class="input-content">
+                    <div class="sign-in-up-item">
+                        <label>账 号</label>
+                        <input name="user.username" type="text" class="normal-input" maxlength="60" value="" tabindex="1" placeholder="账户名 / 邮箱 / 手机号">
+                    </div>
+                    <div class="sign-in-up-item">
+                        <label>密 码</label>
+                        <input name="user.password" type="password" class="normal-input" maxlength="60" value="" tabindex="1" placeholder="请输入密码">
+                    </div>
+                    <div class="sign-in-up-item">
+                        <label></label>
+                        <input class="sign-in-up-button" type="submit" value="登陆">
+                         <input class="sign-in-up-button" type="reset" value="重置">
+                    </div>
+                </div>
+            </form>
+
+            <div class="register-tips">
+            	<ul class="register-tips-list">
+            		<li>> 还没有豆瓣账号 ? <a href="./register.html">立即注册</a></li>
+            		<li>> 点击下载豆瓣移动应用</li>
+            	</ul>
+            </div>
+        </div>
+        <div class="common-footer">
+        	<span class="fleft span-footer">© 5002－8102 fakedouban.com, all rights reserved</span>
+        	<span class="fright span-footer"><a href="">关于豆瓣</a>
+        	<a href="">在豆瓣工作</a>
+        	<a href="">联系我们</a>
+        	<a href="">免责声明</a>
+        	<a href="">帮助中心</a>
+        	<a href="">开发者</a>
+        	<a href="">移动应用</a>
+        	<a href="">豆瓣广告</a></span>
+        </div>
+    </div>
+</body>
+
+</html>
