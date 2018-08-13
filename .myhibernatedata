@@ -1,5 +1,5 @@
 #MyEclipse Hibernate Properties
-#Fri Aug 10 09:11:58 CST 2018
+#Mon Aug 13 19:12:47 CST 2018
 genBasicCompId=false
 sessionFactoryName=
 profile=
@@ -15,6 +15,6 @@ genVersionTag=false
 sessionFactoryId=sessionFactory
 basePersistenceClass=
 genAnnotations=false
-reSettingsFile=
+reSettingsFile=/ssh01/hibernate.reveng.xml
 configFile=/ssh01/src/applicationContext.xml
 createConfigFile=true

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
-<package name="ycj" namespace="/" extends="struts-default">
+<package name="ycj" namespace="/" extends="json-default">
  <interceptors>
 <interceptor name="logincheak" class="interceptor.LoginInterceptor"></interceptor>
 <interceptor-stack name="mystack">
@@ -24,14 +24,23 @@
 	      <result name="success">/success.jsp</result>
 	      <result name="fail">/register.html</result>
 	</action>
+	<action name="findAllMovie" class="com.ycj.web.MovieAction" method="findAllMovie">
+ 	   <result name="success" type="json">
+ 	     <param name="root">result</param>
+       </result>
+    </action>
 		
+		
+	<action name="selectmovie" class="com.ycj.web.MovieAction" method="selectMovie">
+		<result name="success">/moviedetail.jsp</result>
+		<result name="fail">/index.jsp</result>
+	</action>
+	
+	<action name="selectactor" class="com.ycj.web.ActorAction" method="selectActor">
+		<result name="success">/actordetail.jsp</result>
+		<result name="fail">/index.jsp</result>
+	</action>
 </package>
- <package name="default" namespace="/" extends="json-default">
- 	<action name="findAllMovie" class="com.ycj.web.MovieAction" method="findAllMovie">
- 	<result name="success" type="json">
- 	<param name="root">result</param>
- </result>
- </action>
- </package>
+ 
 
 </struts>    

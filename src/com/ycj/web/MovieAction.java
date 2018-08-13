@@ -11,6 +11,7 @@ import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.alibaba.fastjson.JSONObject;
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.ycj.entity.Movieinfo;
 import com.ycj.service.MovieService;
@@ -49,5 +50,32 @@ public class MovieAction extends ActionSupport{
 		result = list.toString();
 		return SUCCESS;
 	}
-
+ public String selectMovie() throws IOException{
+	 HttpServletRequest request=ServletActionContext.getRequest();
+	 request.setCharacterEncoding("UTF-8");
+	 //System.out.println(this.movieInfo.getMoviename());
+	 String mn=movieInfo.getMoviename();
+	 System.out.println(mn);
+	 System.out.println(this.movieInfo);
+	  List <Movieinfo> list =this.movieService.selectMovie(mn);
+	  System.out.println(list.toString());
+	  ServletActionContext.getRequest().setAttribute("moviename",list.get(0).getMoviename());
+	  ServletActionContext.getRequest().setAttribute("director",list.get(0).getDirector());
+	  ServletActionContext.getRequest().setAttribute("actor",list.get(0).getActor());
+	  ServletActionContext.getRequest().setAttribute("type",list.get(0).getType());
+	  ServletActionContext.getRequest().setAttribute("country",list.get(0).getCountry());
+	  ServletActionContext.getRequest().setAttribute("language",list.get(0).getLanguage());
+	  ServletActionContext.getRequest().setAttribute("date",list.get(0).getDate());
+	  ServletActionContext.getRequest().setAttribute("score",list.get(0).getAverage());
+	  ServletActionContext.getRequest().setAttribute("picture",list.get(0).getPicture());
+	  ServletActionContext.getRequest().setAttribute("describe",list.get(0).getMoviedescribe());
+	  String []a=list.get(0).getActor().split("/");
+	  for(int i=0;i<a.length;i++){
+		  System.out.println(a[i]);
+	  }
+	  ServletActionContext.getRequest().setAttribute("ac",a);
+	// ActionContext.getContext().getValueStack().set("ac", a);
+	  return SUCCESS;
+	 
+  }
 }

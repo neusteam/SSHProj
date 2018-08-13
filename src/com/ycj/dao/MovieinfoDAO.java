@@ -106,9 +106,10 @@ public class MovieinfoDAO {
 	public List findByProperty(String propertyName, Object value) {
 		log.debug("finding Movieinfo instance with property: " + propertyName + ", value: " + value);
 		try {
+			System.out.println("最终电影名："+ value);
 			String queryString = "from Movieinfo as model where model." + propertyName + "= ?";
 			Query queryObject = getCurrentSession().createQuery(queryString);
-			queryObject.setParameter(0, value);
+			queryObject.setParameter(0, value.toString());
 			return queryObject.list();
 		} catch (RuntimeException re) {
 			log.error("find by property name failed", re);
@@ -117,6 +118,7 @@ public class MovieinfoDAO {
 	}
 
 	public List findByMoviename(Object moviename) {
+		System.out.println("传入的电影名："+moviename);
 		return findByProperty(MOVIENAME, moviename);
 	}
 

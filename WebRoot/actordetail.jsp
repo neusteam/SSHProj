@@ -9,20 +9,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'register.jsp' starting page</title>
-    
-
-
+	
   </head>
   
   <body>
-    ${msg}
-  <form action="selectmovie">
-   账号:<input name="movieInfo.moviename"  type="text"><br>
-   密码:<input name="user.password"  type="password"><br>
-  <input type="submit"  value="注册">
-   </form>
-   <a href="findAll">查所有用户</a>
-   <a href="findAllMovie">查所有电影</a>
+  姓名:${actorname}<br>
+  性别:${sex}<br>
+  出生日期:${birth}<br>
+  出生地:${hometown}<br>
+  职业:${occupation}<br>
+  影人简介:${describe} <br>
+  <img alt="" src="${picture}">
   </body>
 </html>

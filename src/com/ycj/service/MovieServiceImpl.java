@@ -1,5 +1,7 @@
 package com.ycj.service;
 
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,5 +18,16 @@ public class MovieServiceImpl implements MovieService {
 	private MovieinfoDAO movieinfoDAO;
 public List<Movieinfo> findAll(int count){
 	return this.movieinfoDAO.findAll(count);
+}
+public List<Movieinfo> selectMovie(String moviename){
+	
+	/*String str=null;
+	try {
+		 str=new String( moviename.getBytes( "utf8" ), "GBK" );
+	} catch (UnsupportedEncodingException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}*/
+	return this.movieinfoDAO.findByMoviename(moviename);
 }
 }
