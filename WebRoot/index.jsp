@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -9,18 +9,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'index.jsp' starting page</title>
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
+   
+	
   </head>
   
-  <body>
-    This is my JSP page. <br>
+   <body>
+   
+  <form action="updateuser">
+   账号:<input name="user.username"  type="text"><br>
+   密码:<input name="user.password"  type="password"><br>
+  <input type="submit"  value="注册">
+   </form>
+   <a href="findAll">查所有用户</a>
+   <a href="findAllMovie">查所有电影</a>
   </body>
 </html>

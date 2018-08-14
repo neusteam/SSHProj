@@ -26,4 +26,8 @@ public class UserServiceImpl implements UserService {
     public List<Users> findAll(){
     	return this.usersDao.findAll();
     }
+    public int updateUser(Users user){
+    	this.usersDao.merge(user);
+    	return 0;
+    }
 }

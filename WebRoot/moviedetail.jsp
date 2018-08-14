@@ -19,7 +19,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     电影名： ${moviename}<br>
-    导演：<a href="selectmovie?movieInfo.moviename=${director}">${director}</a><br>
+    导演：<s:iterator value="#request.dc" status="st">
+<s:iterator value="#request.dc[#st.index]">
+<a href="selectactor?actorInfo.director=<s:property/>"><s:property/></a>
+</s:iterator>/
+</s:iterator><br>
     主演：<s:iterator value="#request.ac" status="st">
 <s:iterator value="#request.ac[#st.index]">
 <a href="selectactor?actorInfo.actorname=<s:property/>"><s:property/></a>

@@ -40,6 +40,11 @@
 		<result name="success">/actordetail.jsp</result>
 		<result name="fail">/index.jsp</result>
 	</action>
+	
+	<action name="updateuser" class="com.ycj.web.UserAction" method="updateUser">
+		<result name="success">/index.html</result>
+		<result name="fail">/index.jsp</result>
+	</action>
 </package>
  
 

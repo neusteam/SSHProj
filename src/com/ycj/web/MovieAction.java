@@ -54,14 +54,11 @@ public class MovieAction extends ActionSupport{
 	 HttpServletRequest request=ServletActionContext.getRequest();
 	 request.setCharacterEncoding("UTF-8");
 	 //System.out.println(this.movieInfo.getMoviename());
-	 String mn=movieInfo.getMoviename();
-	 System.out.println(mn);
-	 System.out.println(this.movieInfo);
+	  String mn=movieInfo.getMoviename();
 	  List <Movieinfo> list =this.movieService.selectMovie(mn);
 	  System.out.println(list.toString());
 	  ServletActionContext.getRequest().setAttribute("moviename",list.get(0).getMoviename());
 	  ServletActionContext.getRequest().setAttribute("director",list.get(0).getDirector());
-	  ServletActionContext.getRequest().setAttribute("actor",list.get(0).getActor());
 	  ServletActionContext.getRequest().setAttribute("type",list.get(0).getType());
 	  ServletActionContext.getRequest().setAttribute("country",list.get(0).getCountry());
 	  ServletActionContext.getRequest().setAttribute("language",list.get(0).getLanguage());
@@ -70,11 +67,9 @@ public class MovieAction extends ActionSupport{
 	  ServletActionContext.getRequest().setAttribute("picture",list.get(0).getPicture());
 	  ServletActionContext.getRequest().setAttribute("describe",list.get(0).getMoviedescribe());
 	  String []a=list.get(0).getActor().split("/");
-	  for(int i=0;i<a.length;i++){
-		  System.out.println(a[i]);
-	  }
 	  ServletActionContext.getRequest().setAttribute("ac",a);
-	// ActionContext.getContext().getValueStack().set("ac", a);
+	  String []d=list.get(0).getDirector().split("/");
+	  ServletActionContext.getRequest().setAttribute("dc",d);
 	  return SUCCESS;
 	 
   }

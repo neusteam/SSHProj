@@ -38,6 +38,25 @@ public class UserAction extends ActionSupport{
 			return SUCCESS;
 		}
 	}
+	public String updateUser(){
+		System.out.println(user.getUsername());
+		List <Users> list=this.userService.findUser(this.user.getUsername());
+		System.out.println(list.toString());
+		if(list.size()!=0){
+			user.setId(list.get(0).getId());
+			user.setUsername(user.getUsername());
+			user.setPassword(user.getPassword());
+			user.setStatus(1);
+			user.setCity("π„÷›");
+			System.out.println(user.toString());
+			this.userService.updateUser(this.user);
+			return "fail";
+		}
+		else{
+			return SUCCESS;
+		}
+	}
+	
   public String userLogin(){
 	  System.out.println("GG");
 	System.out.println(this.user);
