@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<package name="ycj" namespace="/" extends="json-default">
+ <interceptors>
+<interceptor name="logincheak" class="interceptor.LoginInterceptor"></interceptor>
+<interceptor-stack name="mystack">
+<interceptor-ref name="defaultStack"></interceptor-ref>
+<interceptor-ref name="logincheak"></interceptor-ref>
+</interceptor-stack>
+</interceptors>
+ 
+    <action name="login" class="com.ycj.web.UserAction" method="userLogin">
+	      <result name="success">/index.html</result>
+	      <result name="fail">/login.html</result>
+	</action>
+	
+	<action name="regist" class="com.ycj.web.UserAction" method="register">
+	      <result name="success">/index.html</result>
+	      <result name="fail">/register.html</result>
+	</action>
+	
+	<action name="findAll" class="com.ycj.web.UserAction" method="findAllUser">
+	      <result name="success">/success.jsp</result>
+	      <result name="fail">/register.html</result>
+	</action>
+	<action name="findAllMovie" class="com.ycj.web.MovieAction" method="findAllMovie">
+ 	   <result name="success" type="json">
+ 	     <param name="root">result</param>
+       </result>
+    </action>
+	
+	<action name="orderbyaverage" class="com.ycj.web.MovieAction" method="findAverage">
+ 	   <result name="success" type="json">
+ 	     <param name="root">result</param>
+       </result>
+    </action>
+    
+    <action name="orderbydate" class="com.ycj.web.MovieAction" method="findDate">
+ 	   <result name="success" type="json">
+ 	     <param name="root">result</param>
+       </result>
+    </action>
+		
+	<action name="selectmovie" class="com.ycj.web.MovieAction" method="selectMovie">
+		<result name="success">/moviedetail.jsp</result>
+		<result name="fail">/index.jsp</result>
+	</action>
+	
+	<action name="selectactor" class="com.ycj.web.ActorAction" method="selectActor">
+		<result name="success">/actordetail.jsp</result>
+		<result name="fail">/index.jsp</result>
+	</action>
+	
+	<action name="updateuser" class="com.ycj.web.UserAction" method="updateUser">
+		<result name="success">/index.html</result>
+		<result name="fail">/index.jsp</result>
+	</action>
+	
+	<action name="findbykey" class="com.ycj.web.MovieAction" method="findByKey">
+		<result name="success">/findbykey.jsp</result>
+		<result name="fail">/index.html</result>
+	</action>
+</package>
+ 
+
+</struts>    

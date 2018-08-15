@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>豆瓣</title>
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link rel="stylesheet" href="./css/common.css">
+        <link rel="stylesheet" href="./css/index.css">
+        <script src="./js/util.js"></script>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <!-- <div class="alert-box"> -->
+            <div class="alert-content-banner">
+                <button class="close-button">
+                X
+                </button>
+                <div class="alert-content">
+                    <!--                 <h1>我不是药神 剧情/喜剧</h1>
+                    <img src="./image/movie2.png" alt="">
+                    <p>导演 ： 文牧野</p>
+                    <p>演员 ： 徐峥/王传君</p>
+                    <p>类型 ： 剧情/喜剧</p>
+                    <p>日期 ： 2018-07-07</p>
+                    <p>地区 ： 中国大陆</p>
+                    <p>语言 ： 普通话</p>
+                    <p>评分 ： <span class="score">7.2分</span></p>
+                    <p>电影简介 ： 影片根据2014年轰动一时的亚洲考场作弊案改编，讲述了天才学霸利用高智商考场作弊牟取暴利的故事。出生平凡的天才少女Lynn（茱蒂蒙·琼查容苏因 饰）在进入贵族学校后，结识了富二代同学Grace（依莎亚·贺苏汪饰）与Pat（披纳若·苏潘平佑饰），从此开始了考场作弊生涯，与此同时，另一名记忆力极佳的天才学霸Bank（查侬·散顶腾古 饰）发现了Lynn不为人知的交易。经过多场险象环生的作弊战争后，Lynn接下最后一单在国际考场上为富家子弟作弊的天价委托。一场横跨两大洲的完美作弊方案横空出世，然而一切并不像他们想的那么简单……</p> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="index-wrapper">
+            <div class="index-header">
+                <ul class="index-left-nav index-nav">
+                    <a href="">
+                        <li>豆瓣</li>
+                    </a>
+                    <a href="">
+                        <li>读书</li>
+                    </a>
+                    <a href="">
+                        <li>电影</li>
+                    </a>
+                    <a href="">
+                        <li>音乐</li>
+                    </a>
+                    <a href="">
+                        <li>同城</li>
+                    </a>
+                    <a href="">
+                        <li>小组</li>
+                    </a>
+                    <a href="">
+                        <li>阅读</li>
+                    </a>
+                    <a href="">
+                        <li>FM</li>
+                    </a>
+                    <a href="">
+                        <li>时间</li>
+                    </a>
+                    <a href="">
+                        <li>豆品</li>
+                    </a>
+                    <a href="">
+                        <li>更多</li>
+                    </a>
+                </ul>
+                <ul class="index-right-nav index-nav">
+                    <a href="./login.html">
+                        <li>登录</li>
+                    </a>
+                    <a href="./register.html">
+                        <li>注册</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="index-search-banner">
+                <div class="index-search-content">
+                    <div class="movie-logo" href="./index.html">
+                    	<img src="./image/movie_logo.png" alt="">
+                    </div>
+                    <div class="search-input-banner">
+                        <form action="findbykey" method="post">
+                            <input name="keyWord" type="text" class="search-input" placeholder="搜索电影、电视剧、综艺、影人">
+                            <input type="submit" class="search-input-submit" value="搜索">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="index-menu-banner">
+                <ul class="menu">
+                    <li>影讯&购票</li>
+                    <li>选电影</li>
+                    <li>电视剧</li>
+                    <li>排行榜</li>
+                    <li>分类</li>
+                    <li>影评</li>
+                    <li>2017年度榜单</li>
+                    <li>2017观影报告</li>
+                </ul>
+            </div>
+            <div class="index-content-wrapper">
+                <div class="index-aside">
+                    <div class="index-aside-event">
+                        <ul class="event-list">
+                            <li><p class="event-title">电影活动...</p></li>
+                            <li><a href="">徐克 : 身不由己的地方就是江湖</a></li>
+                            <li><a href="">瓣嘴丨文艺导演宠爱的李梦，竟然想演傻白甜</a></li>
+                            <li><a href="">2018 上半年豆瓣电影口碑榜Top50</a></li>
+                        </ul>
+                    </div>
+                    <div class="index-aside-event">
+                        <ul class="event-list">
+                            <li><p class="event-title">电影活动...</p></li>
+                            <li><a href="">徐克 : 身不由己的地方就是江湖</a></li>
+                            <li><a href="">瓣嘴丨文艺导演宠爱的李梦，竟然想演傻白甜</a></li>
+                            <li><a href="">2018 上半年豆瓣电影口碑榜Top50</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="index-content">
+                    <ul class="index-movies-tags">
+                        <li>正在热映</li>
+                        <li><a href="">即将上映</a></li>
+                    </ul>
+                    <ul class="index-movies-silders">
+                        <!--                     <li>
+                            <ul class="index-movies-item">
+                                <li class="image">
+                                    <img src="./image/movie2.png" movieid="1" alt="">
+                                </li>
+                                <li>邪不压正</li>
+                                <li><span class="score">7.2分</span></li>
+                                <li>
+                                    <button class="purchase">选座购票</button>
+                                </li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                </div>
+                <div class="index-content">
+                    <ul class="index-movies-tags">
+                        <li>最近热门电影</li>
+                        <li><a href="">热门</a></li>
+                        <li><a href="">最新</a></li>
+                        <li><a href="">豆瓣高分</a></li>
+                        <li><a href="">冷门佳片</a></li>
+                        <li><a href="">华语</a></li>
+                        <li><a href="">欧美</a></li>
+                        <li><a href="">韩国</a></li>
+                        <li><a href="">日本</a></li>
+                    </ul>
+                    <ul class="index-movies-silders">
+                    </ul>
+                </div>
+                <div class="index-content">
+                    <ul class="index-movies-tags">
+                        <li>最近热门电视剧</li>
+                        <li><a href="">热门</a></li>
+                        <li><a href="">国产剧</a></li>
+                        <li><a href="">综艺</a></li>
+                        <li><a href="">美剧</a></li>
+                        <li><a href="">日剧</a></li>
+                        <li><a href="">韩剧</a></li>
+                        <li><a href="">日本动画</a></li>
+                        <li><a href="">纪录片</a></li>
+                    </ul>
+                    <ul class="index-movies-silders">
+                    </ul>
+                </div>
+                <div class="common-adv"><img src="./image/adv.jpg" alt="" class="adv"></div>
+                <div class="common-footer" style="float: left;">
+                    <span class="fleft span-footer">© 5002－8102 fakedouban.com, all rights reserved</span>
+                    <span class="fright span-footer"><a href="">关于豆瓣</a>
+                    <a href="">在豆瓣工作</a>
+                    <a href="">联系我们</a>
+                    <a href="">免责声明</a>
+                    <a href="">帮助中心</a>
+                    <a href="">开发者</a>
+                    <a href="">移动应用</a>
+                    <a href="">豆瓣广告</a></span>
+                </div>
+            </div>
+        </div>
+        <script src="./js/index.js"></script>
+    </body>
+</html>
