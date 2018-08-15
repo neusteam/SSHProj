@@ -79,7 +79,30 @@ public class MovieAction extends ActionSupport{
 	  return SUCCESS;
 	 
   }
- 
+ public String findAverage() throws IOException{
+		HttpServletRequest request=ServletActionContext.getRequest();
+		HttpServletResponse response=ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=utf-8");
+		request.setCharacterEncoding("UTF-8");
+		String json = JsonDecoding.readJSONString(request);
+		JSONObject jo = JSONObject.parseObject(json);
+		int count = Integer.parseInt(jo.getString("count"));
+		List <Movieinfo> list=this.movieService.findAverage(count);
+		result = list.toString();
+		return SUCCESS;
+ }
+ public String findDate() throws IOException{
+		HttpServletRequest request=ServletActionContext.getRequest();
+		HttpServletResponse response=ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=utf-8");
+		request.setCharacterEncoding("UTF-8");
+		String json = JsonDecoding.readJSONString(request);
+		JSONObject jo = JSONObject.parseObject(json);
+		int count = Integer.parseInt(jo.getString("count"));
+		List <Movieinfo> list=this.movieService.findDate(count);
+		result = list.toString();
+		return SUCCESS;
+}
  public String findByKey() throws IOException{
 	 HttpServletRequest request=ServletActionContext.getRequest();
 	 request.setCharacterEncoding("UTF-8");

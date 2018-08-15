@@ -29,7 +29,18 @@
  	     <param name="root">result</param>
        </result>
     </action>
-		
+	
+	<action name="orderbyaverage" class="com.ycj.web.MovieAction" method="findAverage">
+ 	   <result name="success" type="json">
+ 	     <param name="root">result</param>
+       </result>
+    </action>
+    
+    <action name="orderbydate" class="com.ycj.web.MovieAction" method="findDate">
+ 	   <result name="success" type="json">
+ 	     <param name="root">result</param>
+       </result>
+    </action>
 		
 	<action name="selectmovie" class="com.ycj.web.MovieAction" method="selectMovie">
 		<result name="success">/moviedetail.jsp</result>

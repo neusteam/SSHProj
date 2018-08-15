@@ -119,7 +119,6 @@ public class MovieinfoDAO {
 	public List findByKey(String key) {
 		log.debug("finding Movieinfo instance with keyword: " + key);
 		try {
-			String queryString = "from Movieinfo as model where model.moviename like :key";
 			Query queryObject = getCurrentSession().createQuery(queryString);
 			queryObject.setParameter("key", "%" + key + "%");
 			return queryObject.list();

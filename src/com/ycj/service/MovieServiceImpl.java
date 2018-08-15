@@ -33,4 +33,10 @@ public List<Movieinfo> selectMovie(String moviename){
 public List<Movieinfo> findByKey(String key){
 	return this.movieinfoDAO.findByKey(key);
 }
+public List <Movieinfo> findAverage(int count){
+	return this.movieinfoDAO.findAverage(count);
+}
+public List<Movieinfo> findDate(int count){
+	  return this.movieinfoDAO.findDate(count);
+}
 }

@@ -44,8 +44,8 @@ public class UserAction extends ActionSupport{
 		System.out.println(list.toString());
 		if(list.size()!=0){
 			user.setId(list.get(0).getId());
-			user.setUsername(user.getUsername());
-			user.setPassword(user.getPassword());
+			user.setUsername(list.get(0).getUsername());
+			user.setPassword(list.get(0).getPassword());
 			user.setStatus(1);
 			user.setCity("π„÷›");
 			System.out.println(user.toString());
