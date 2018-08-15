@@ -116,7 +116,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
             <nav>
                 <ul class="nav">
-                    <li><a href=""><i class="iconfont">&#xeaf5;</i> 写评论</a></li>
+                    <li><a href="#comment-textarea"><i class="iconfont">&#xeaf5;</i> 写评论</a></li>
                 </ul>
             </nav>
 
@@ -130,8 +130,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         <p>该用户的姓名 <span class="score">分数</span> <span class="timestamp">2018-10-10</span></p>
                         <div class="comment-content">评论内容 : 多人版《荒岛求生》，孤岛版《欢迎来到东莫村》…TB船车也太高级了，都想作死体验一把了，哈哈哈！故事其实挺通俗易懂、当荒岛生存冒险片看也不赖。可解读内容多，黄渤导演野心很大，也很努力想拍好，虽然想讲的东西略多，片子再短一点或许更好。看《瓣嘴》黄渤自造差评，看完正片后超出了预期。片尾两彩蛋，字幕最后的徐峥彩蛋加分。</div>
                     </li>
+                    <li>
+                        <p><span class="score"></span><span class="timestamp"></span></p>
+                        <div class="comment-content">还没有用户评论哟</div>
+                    </li>
                 </ul>
             </div>
+
+            <div class="label edit-label"><i class="iconfont" style="font-size: 16px;line-height: 16px;">&#xeabf;</i> 添加评论</div>
+
+            <form action="" style="float: left;">
+                <textarea name="content" id="comment-textarea" cols="30" rows="10"></textarea>
+                <input type="hidden" name="moviename" value="${moviename}">
+                <input type="hidden" name="usernmae" value="${username}">
+                <input type="submit" class="comment-button">
+            </form>
             </div>
         </div>
     </div>

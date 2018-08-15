@@ -83,7 +83,6 @@ input:-webkit-autofill
 {
     -webkit-box-shadow: 0 0 0 1000px white inset !important;
 }
-
 a
 {
     font-size: 10px;
@@ -94,13 +93,17 @@ a
 
     color: rgba(33, 66, 99, 1);
 }
-
 a:hover
 {
     color: #fff;
     background: #039;
 }
-
+.label
+{
+    width: 100%;
+    float: left;
+    height: 30px;
+}
 .common-footer
 {
     width: 100%;
