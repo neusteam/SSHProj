@@ -10,7 +10,7 @@
         <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
-        <div class="alert-box">
+        <!-- <div class="alert-box"> -->
             <div class="alert-content-banner">
                 <button class="close-button">
                 X
@@ -29,6 +29,7 @@
                 </div>
             </div>
         </div>
+
         <div class="index-wrapper">
             <div class="index-header">
                 <ul class="index-left-nav index-nav">
@@ -78,12 +79,10 @@
             <div class="index-search-banner">
                 <div class="index-search-content">
                     <div class="movie-logo" href="./index.html">
-                        <a href="">
-                            <img src="./image/movie_logo.png" alt="">
-                        </a>
+                    	<img src="./image/movie_logo.png" alt="">
                     </div>
                     <div class="search-input-banner">
-                        <form action="">
+                        <form action="findbykey" method="post">
                             <input name="keyWord" type="text" class="search-input" placeholder="搜索电影、电视剧、综艺、影人">
                             <input type="submit" class="search-input-submit" value="搜索">
                         </form>

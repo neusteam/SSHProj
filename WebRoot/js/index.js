@@ -1,4 +1,5 @@
 window.addEventListener('load', () => {
+	let movieData = "";
 	let username = getCookie("username");
 	if(username != ""){
 		let rootUl = _prime(".index-right-nav")[0];
@@ -50,14 +51,15 @@ window.addEventListener('load', () => {
             initModalContent(e.target.getAttribute("movieId"));
         }
     })
-    _prime(".index-content")[2].addEventListener("click", (e) => {
-        if (e.target.nodeName == "IMG") {
-            _prime(".alert-box")[0].setAttribute("style", "background-color:rgba(0, 0, 0, .5);z-index:1");
-            _prime(".alert-content")[0].setAttribute("style", "opacity:1;z-index:1");
-
-            initModalContent(e.target.getAttribute("movieId"));
-        }
-    })
+    
+//    _prime(".index-content")[2].addEventListener("click", (e) => {
+//        if (e.target.nodeName == "IMG") {
+//            _prime(".alert-box")[0].setAttribute("style", "background-color:rgba(0, 0, 0, .5);z-index:1");
+//            _prime(".alert-content")[0].setAttribute("style", "opacity:1;z-index:1");
+//
+//            initModalContent(e.target.getAttribute("movieId"));
+//        }
+//    })
 
 
 
@@ -108,19 +110,22 @@ const initIndexContentItems = (movieData) => {
         let rootLi = getDomElement("li", "", "");
         let ulNode = getDomElement("ul", "index-movies-item", ""),
             imageLiNode = getDomElement('li', "image", ""),
+            imageANode = getDomElement('a',"",""),
             imageNode = getDomElement("img", "", ""),
             nameLiNode = getDomElement("li", "", movieData[i].moviename),
             scoreLiNode = getDomElement("li", "", ""),
             scoreSpanNode = getDomElement("span", "score", movieData[i].average + "分"),
             buttonLiNode = getDomElement("li", "", ""),
             buttonNode = getDomElement("button", "purchase", "选座购票");
-
+        
+        imageANode.setAttribute("href","./selectmovie?movieInfo.moviename=" + movieData[i].moviename);
         imageNode.setAttribute("src", "./" + movieData[i].picture);
         imageNode.setAttribute("movieId", movieData[i].movieId - 1);
 
         // console.log(movieData[i].movieId)
 
-        imageLiNode.appendChild(imageNode);
+        imageANode.appendChild(imageNode);
+        imageLiNode.appendChild(imageANode);
 
         scoreLiNode.appendChild(scoreSpanNode);
         buttonLiNode.appendChild(buttonNode);
@@ -178,5 +183,3 @@ const initModalContent = (movieId) => {
     rootDiv.appendChild(scorePNode);
     rootDiv.appendChild(describePNode);
 }
-
-let movieData = "";

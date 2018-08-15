@@ -30,4 +30,7 @@ public List<Movieinfo> selectMovie(String moviename){
 	}*/
 	return this.movieinfoDAO.findByMoviename(moviename);
 }
+public List<Movieinfo> findByKey(String key){
+	return this.movieinfoDAO.findByKey(key);
+}
 }

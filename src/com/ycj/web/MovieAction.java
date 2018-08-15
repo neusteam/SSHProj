@@ -22,9 +22,15 @@ public class MovieAction extends ActionSupport{
 	@Autowired
 	private MovieService movieService;
 	private Movieinfo movieInfo;
-	
 	private String result;
+	private String keyWord;
 	
+	public String getKeyWord() {
+		return keyWord;
+	}
+	public void setKeyWord(String keyWord) {
+		this.keyWord = keyWord;
+	}
 	public String getResult() {
 		return result;
 	}
@@ -73,4 +79,17 @@ public class MovieAction extends ActionSupport{
 	  return SUCCESS;
 	 
   }
+ 
+ public String findByKey() throws IOException{
+	 HttpServletRequest request=ServletActionContext.getRequest();
+	 request.setCharacterEncoding("UTF-8");
+	 List<Movieinfo> list =this.movieService.findByKey(this.keyWord);
+	 if(list.size()!=0){
+		 ServletActionContext.getRequest().setAttribute("list",list);
+		 return SUCCESS;
+	 }
+	 else{
+		 return "fail";
+	 }
+ }
 }

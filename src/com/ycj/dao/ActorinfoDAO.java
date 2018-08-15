@@ -111,7 +111,7 @@ public class ActorinfoDAO {
 			throw re;
 		}
 	}
-
+	
 	public List findByActorname(Object actorname) {
 		return findByProperty(ACTORNAME, actorname);
 	}

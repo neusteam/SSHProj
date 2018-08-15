@@ -45,6 +45,11 @@
 		<result name="success">/index.html</result>
 		<result name="fail">/index.jsp</result>
 	</action>
+	
+	<action name="findbykey" class="com.ycj.web.MovieAction" method="findByKey">
+		<result name="success">/findbykey.jsp</result>
+		<result name="fail">/index.html</result>
+	</action>
 </package>
  
 
